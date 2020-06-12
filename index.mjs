@@ -30,6 +30,7 @@ var currentCode = ''
  * @param {string} key 
  */
 async function write (key) {
+  try {
   // ctrl-c ( end of text )
   if (key === '\u0003') {
     return process.exit(0)
@@ -45,7 +46,8 @@ async function write (key) {
   } else {
     process.stdout.write(currentCode[0] || '') // write the first charater of the string to stdout
     currentCode = currentCode.substring(1, Infinity) // remove the first character
-  }
+    }
+  } catch {}
 }
 
 process.stdin
