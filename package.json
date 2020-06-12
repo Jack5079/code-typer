@@ -13,6 +13,9 @@
   "author": "Jack <hello@5079.ml> (https://5079.ml)",
   "license": "ISC",
   "dependencies": {},
+  "homepage": "https://github.com/Jack5079/hacker-typer#readme",
+  "bugs": "https://github.com/Jack5079/hacker-typer/issues",
+  "repository": "github:Jack5079/hacker-typer",
   "bin": "index.mjs",
   "devDependencies": {
     "@types/node": "^14.0.13"
