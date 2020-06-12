@@ -15,13 +15,13 @@ const json = url => new Promise((resolve, reject) => {
     }
   },res => {
     res.on('data', chunk => {
-    val += chunk
+    val += chunk.toString()
     })
     res.on('end', () => resolve(JSON.parse(val)))
   }).on('error', reject)
 })
 
-console.log("  _   _            _               _____                      \n | | | | __ _  ___| | _____ _ __  |_   _|   _ _ __   ___ _ __ \n | |_| |/ _` |/ __| |/ / _ \\ '__|   | || | | | '_ \\ / _ \\ '__|\n |  _  | (_| | (__|   <  __/ |      | || |_| | |_) |  __/ |   \n |_| |_|\\__,_|\\___|_|\\_\\___|_|      |_| \\__, | .__/ \\___|_|   \n                                        |___/|_|              \n")
+console.log("   ____          _        _____                      \n  / ___|___   __| | ___  |_   _|   _ _ __   ___ _ __ \n | |   / _ \\ / _` |/ _ \\   | || | | | '_ \\ / _ \\ '__|\n | |__| (_) | (_| |  __/   | || |_| | |_) |  __/ |   \n  \\____\\___/ \\__,_|\\___|   |_| \\__, | .__/ \\___|_|   \n                               |___/|_|              \n")
 console.log('Press any key to start. You can also press ` to make the program choose another snippet.')
 
 var currentCode = ''
