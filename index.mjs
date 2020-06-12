@@ -45,7 +45,7 @@ async function write (key) {
     process.stdout.write('c')
   } else {
     process.stdout.write(currentCode[0] || '') // write the first charater of the string to stdout
-    currentCode = currentCode.substring(1, Infinity) // remove the first character
+    currentCode = currentCode.substr(1) // remove the first character
     }
   } catch {}
 }
